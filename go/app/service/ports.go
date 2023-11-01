@@ -3,13 +3,13 @@ package service
 import "context"
 
 type DBPort interface {
-	Save(ctx context.Context, p Params) error
+	Save(ctx context.Context, params Params) error
 }
 
 type BrokerPort interface {
-	Publish(ctx context.Context, p Params) error
+	Publish(ctx context.Context, params Params) error
 }
 
 type EmailPort interface {
-	Send(ctx context.Context, p Params) error
+	Send(ctx context.Context, params Params) error
 }

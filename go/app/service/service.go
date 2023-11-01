@@ -1,6 +1,9 @@
 package service
 
-import "context"
+import (
+	"context"
+	"fmt"
+)
 
 type Service struct {
 	db     DBPort
@@ -17,5 +20,7 @@ func New(db DBPort, broker BrokerPort, email EmailPort) *Service {
 }
 
 func (svc *Service) ServiceMethod(ctx context.Context, p Params) (Result, error) {
-	panic("not implemented")
+	err := svc.email.Send(ctx, p)
+	res := Result{Msg: fmt.Sprintf("%s is %d years old", p.Name, p.Age)}
+	return res, err
 }
