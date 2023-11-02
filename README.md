@@ -12,6 +12,8 @@ Please refer to [DOCS](./DOCS.md)
 - [Typescript](./ts)
 - [Python](./py)
 
+- [Using go and fx](./gofx)
+
 ## References
 
 - [Ports & Adapters Architecture](https://herbertograca.com/2017/09/14/ports-adapters-architecture/)
